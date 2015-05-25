@@ -92,8 +92,12 @@ class Hello(object):
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     </head>
             <body>
-            第七組齒輪部分<br />
+           第七組齒輪部分<br />
             <a href="mygeartest2">mygeartest2</a><br />
+            <form method=POST action=raven>
+            <input type=submit value=123456>
+            嗨嗨!一直都很厲害
+            
             </body>
             </html>
      '''
@@ -185,6 +189,20 @@ class Hello(object):
     </html>
     '''
 
+        return outstring
+    #@+node:.20150525162104.1: *3* raven
+    @cherrypy.expose
+    def raven(self):
+        outstring = '''
+    <!DOCTYPE html> 
+    <html>
+    <head>
+    </head>
+    <body>
+    555..........5555
+    </body>
+    </html>
+    '''
         return outstring
     #@+node:2015.20150330144929.1713: *3* twoDgear
     @cherrypy.expose
