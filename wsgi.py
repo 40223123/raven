@@ -19,6 +19,8 @@ import os
 import random
 # 導入 gear 模組
 import gear
+import man
+import man2
 
 ################# (2) 廣域變數設定區
 # 確定程式檔案所在目錄, 在 Windows 下有最後的反斜線
@@ -92,11 +94,23 @@ class Hello(object):
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     </head>
             <body>
-           第七組齒輪部分<br />
-            <a href="mygeartest2">mygeartest2</a><br />
+            <form method=POST action=mygeartest2>
+            <input type=submit value=6個齒輪程式>
+            </form>
+            <hr>
             <form method=POST action=raven>
-            <input type=submit value=123456>
-            嗨嗨!一直都很厲害
+            <input type=submit value=班級姓名座號>
+            </form>
+            <hr>
+            <form method=POST action=hello>
+            <input type=submit value=嗨>
+            </form>
+            <hr>
+            <form method=POST action=man2>
+            <input type=submit value=機器人組立>
+            </form>
+            <hr>
+            
             
             </body>
             </html>
@@ -199,7 +213,7 @@ class Hello(object):
     <head>
     </head>
     <body>
-    555..........5555
+    四設計二甲-40223123-施翔智
     </body>
     </html>
     '''
@@ -909,6 +923,8 @@ application_conf = {'/static':{
 
 root = Hello()
 root.gear = gear.Gear()
+root.man = man.MAN()
+root.man2 = man2.MAN()
 
 if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
     # 表示在 OpenSfhit 執行
